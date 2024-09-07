@@ -1,0 +1,93 @@
+<div class="container-fluid">
+    <div class="row flex-nowrap">
+        <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
+            <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+                <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                    <img src="../../../assets/img/Zooflogo.png" alt="" class="w-25 d-none d-md-inline-block" style="margin-right: 10px;"> 
+                    <span class="fs-5 d-none d-sm-inline">Menu</span>
+                </a>
+                <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+                    <li class="nav-item">
+                        <a href="/dashboard" class="nav-link align-middle px-0">
+                            <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#submenu3" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                            <i class="fs-4 bi-grid"></i> <span class="ms-1 d-none d-sm-inline">Products</span> </a>
+                        <ul class="collapse nav flex-column ms-1" id="submenu3" data-bs-parent="#menu">
+                            <li class="w-100">
+                                <a href="/dashboard/shirts" class="nav-link px-0"> <span class="d-none d-sm-inline">Shirt</span></a>
+                            </li>
+                            <li>
+                                <a href="/dashboard/thirts" class="nav-link px-0"> <span class="d-none d-sm-inline">T shirt</span></a>
+                            </li>
+                            <li>
+                                <a href="/dashboard/pants" class="nav-link px-0"> <span class="d-none d-sm-inline">Pants</span></a>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#submenu4" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                            <i class="bi bi-people-fill"></i> <span class="ms-1 d-none d-sm-inline">Team</span> </a>
+                        <ul class="collapse nav flex-column ms-1" id="submenu4" data-bs-parent="#menu">
+                            <li class="w-100">
+                                <a href="https://github.com/Coder-Vasen" class="nav-link px-0"> <span class="d-none d-sm-inline">Kirthevasen K</span></a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/Aries-Surya" class="nav-link px-0"> <span class="d-none d-sm-inline">Surya Prakash G</span></a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/audiofolks" class="nav-link px-0"> <span class="d-none d-sm-inline">Tharun V S</span></a>
+                            </li>
+
+                        </ul>
+                    </li>
+                </ul>
+                <hr>
+                <div class="dropdown pb-4">
+                    <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+                        id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="https://github.com/mdo.png" alt="hugenerd" width="30" height="30"
+                            class="rounded-circle">
+                        <span class="d-none d-sm-inline mx-1">{{auth.userData()?.displayName}}</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
+                        <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Upload Photo</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#" (click)="auth.SignOut()">Sign out</a></li>
+                    </ul>
+                    
+                      
+                      <!-- Modal -->
+                      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <form action="">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Upload Your Display Picture</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                  </div>
+                                  <div class="modal-body">
+                                      <label for="formFile" class="form-label">Default file input example</label>
+                                      <input class="form-control" type="file" id="formFile" (change)="auth.setFile($event)">
+                                  </div>
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary" (click)="auth.UploadImage()" >Upload</button>
+                                </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+        <div class="col px-0 max-100">
+            <app-content></app-content>
+        </div>
+    </div>
+</div>

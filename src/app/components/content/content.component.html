@@ -1,0 +1,27 @@
+<section id="hero">
+    <h4>Trade-in-Offers</h4>
+    <h2>Super Value Deals</h2>
+    <h1>On all products</h1>
+    <p>Save more with coupons & up to 70% off!</p>
+    <button class="btn btn-outline-secondary">Shop Now</button>
+</section>
+
+<section id="product1" class="section-p1">
+    <h2 class="mt-4">Featured Products</h2>
+    <p class="mb-1">Summer Collection New Morden Design</p>
+
+    <div class="pro-container">
+        <div class="pro" *ngFor="let card of cards()">
+            <img src={{card.imageLink}} alt="">
+            <div class="des">
+                <span>{{card.productMake}}</span>
+                <h5>{{card.title}}</h5>
+                <div class="star">
+                    <i class="bi bi-star-fill" *ngFor="let i of Starfill(card)"></i>
+                </div>
+                <h4>Rs.{{card.price}}</h4>
+            </div>
+            <a><i class="bi bi-cart cart"></i></a>
+        </div>
+    </div>
+</section>

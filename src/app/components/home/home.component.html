@@ -1,0 +1,78 @@
+<div class="body-container">
+    <div class="container">
+        <input type="checkbox" id="flip">
+        <div class="cover">
+            <div class="front">
+                <img src="../../../assets/img/Left.png" alt="">
+                <div class="text">
+                    <span class="text-1">Explore the fashion adventure!!</span>
+                    <span class="text-2">Let's get connected</span>
+                </div>
+            </div>
+            <div class="back">
+                <img class="backImg" src="../../../assets/img/Right.png" alt="">
+                <div class="text">
+                    <span class="text-1">What you are waiting for?</span>
+                    <span class="text-2">Let's get started</span>
+                </div>
+            </div>
+        </div>
+        <div class="forms">
+            <div class="form-content">
+                <div class="login-form">
+                    <div class="title">Login</div>
+                    <form action="#">
+                        <div class="input-boxes">
+                            <div class="input-box">
+                                <i class="bi bi-envelope-at-fill" style="font-size: 1.5rem;"></i>
+                                <input class="login-email" type="email" placeholder="Enter your email" required #email>
+                            </div>
+                            <div class="input-box">
+                                <i class="bi bi-lock-fill" style="font-size: 1.5rem;"></i>
+                                <input class="login-password" type="password" placeholder="Enter your password" required
+                                    #password>
+                            </div>
+                            <div class="text"><a href="#" (click)="auth.SendForgotPasswordLink()">Forgot password?</a>
+                            </div>
+                            <div class="button input-box">
+                                <input class="login-button" type="button" value="Sign In"
+                                    (click)="auth.SignIn(email.value, password.value)">
+                            </div>
+                            <div class="text sign-up-text">Don't have an account? <label for="flip">Sigup now</label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="signup-form">
+                    <div class="title">Signup</div>
+                    <form action="#">
+                        <div class="input-boxes">
+                            <div class="input-box">
+                                <i class="bi bi-person-fill" style="font-size: 1.5rem;"></i>
+                                <input class="signup-username" type="text" placeholder="Enter your name" required
+                                    #username>
+                            </div>
+                            <div class="input-box">
+                                <i class="bi bi-envelope-at-fill" style="font-size: 1.5rem;"></i>
+                                <input class="signup-email" type="email" placeholder="Enter your email" required
+                                    #upemail>
+                            </div>
+                            <div class="input-box">
+                                <i class="bi bi-lock-fill" style="font-size: 1.5rem;"></i>
+                                <input class="signup-password" type="password" placeholder="Enter your password"
+                                    required #uppassword>
+                            </div>
+                            <div class="button input-box">
+                                <input class="signup-button" type="button" value="Sign Up"
+                                    (click)="auth.SignUp(username.value, upemail.value, uppassword.value)">
+                            </div>
+                            <div class="text sign-up-text">Already have an account? <label for="flip">Login now</label>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

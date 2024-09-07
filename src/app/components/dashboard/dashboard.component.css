@@ -1,0 +1,28 @@
+.max-100 {
+    max-height: 100vh;
+    overflow-y: auto;
+  }
+  
+.content {
+  display: flex;
+}
+
+li a{
+  color: #e4c650;
+  position: relative;
+}
+
+li a::before{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  width: 0%;
+  transition: width 150ms ease-in-out;
+  color: #f0c20c;
+}
+
+li a:hover::before{
+  width: 100%;
+}

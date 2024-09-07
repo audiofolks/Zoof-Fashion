@@ -38,7 +38,7 @@ To run the application locally, follow these steps:
 ## Current Contributers
 
 - Kirthevasen [(Coder-Vasen)](https://github.com/Coder-Vasen)
-- Tharun [(audiofolks)](https://github.com/audiofolks)
+- Surya [(Aries-Surya)](https://github.com/Aries-Surya)
 
 ## Contributing
 

@@ -27,7 +27,7 @@ To run the application locally, follow these steps:
 
 ## Demo
 
-[Link to Demo](demo-url)
+[Link to Demo](https://zoof-fashion.vercel.app/)
 
 ## Screenshots
 
